@@ -1,3 +1,4 @@
+
 // --- PINES SEMÁFOROS VEHICULARES ---
 const int LED_V_NS = 13; // Verde Vehicular Norte-Sur
 const int LED_A_NS = 12; // Amarillo Vehicular Norte-Sur
