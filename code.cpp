@@ -18,3 +18,18 @@ const int PEAT_R_EO = 4;  // Rojo Peatonal Este-Oeste
 const unsigned long TIEMPO_VERDE = 5000;       // 5 segundos
 const unsigned long TIEMPO_AMARILLO = 2000;    // 2 segundos
 const unsigned long TIEMPO_ROJO_TOTAL = 1500;  // 1.5 segundos de seguridad
+
+void setup() {
+  pinMode(LED_V_NS, OUTPUT);
+  pinMode(LED_A_NS, OUTPUT);
+  pinMode(LED_R_NS, OUTPUT);
+  
+  pinMode(LED_V_EO, OUTPUT);
+  pinMode(LED_A_EO, OUTPUT);
+  pinMode(LED_R_EO, OUTPUT);
+  
+  pinMode(PEAT_V_NS, OUTPUT);
+  pinMode(PEAT_R_NS, OUTPUT);
+  pinMode(PEAT_V_EO, OUTPUT);
+  pinMode(PEAT_R_EO, OUTPUT);
+}
