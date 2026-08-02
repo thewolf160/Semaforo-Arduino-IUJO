@@ -13,3 +13,8 @@ const int PEAT_R_NS = 9;  // Rojo Peatonal Norte-Sur
 
 const int PEAT_V_EO = 5;  // Verde Peatonal Este-Oeste
 const int PEAT_R_EO = 4;  // Rojo Peatonal Este-Oeste
+
+// --- TIEMPOS (en milisegundos) ---
+const unsigned long TIEMPO_VERDE = 5000;       // 5 segundos
+const unsigned long TIEMPO_AMARILLO = 2000;    // 2 segundos
+const unsigned long TIEMPO_ROJO_TOTAL = 1500;  // 1.5 segundos de seguridad
