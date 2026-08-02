@@ -34,3 +34,50 @@ void setup() {
   pinMode(PEAT_V_EO, OUTPUT);
   pinMode(PEAT_R_EO, OUTPUT);
 }
+
+void loop() {
+  
+  // =================================================================
+  // FASE 1: VEHICULAR N-S VERDE | PEATONAL N-S ROJO | PEATONAL E-O VERDE
+  // =================================================================
+  
+  // Semáforo Vehicular: N-S Avanza / E-O Detenido
+  digitalWrite(LED_V_NS, HIGH);
+  digitalWrite(LED_A_NS, LOW);
+  digitalWrite(LED_R_NS, LOW);
+  
+  digitalWrite(LED_V_EO, LOW);
+  digitalWrite(LED_A_EO, LOW);
+  digitalWrite(LED_R_EO, HIGH);
+  
+  // Semáforo Peatonal: N-S en Rojo / E-O en Verde
+  digitalWrite(PEAT_V_NS, LOW);
+  digitalWrite(PEAT_R_NS, HIGH);
+  
+  digitalWrite(PEAT_V_EO, HIGH);
+  digitalWrite(PEAT_R_EO, LOW);
+  
+  delay(TIEMPO_VERDE);
+
+  // --- Transición N-S AMARILLO ---
+  digitalWrite(LED_V_NS, LOW);
+  digitalWrite(LED_A_NS, HIGH);
+  
+  // Peatones E-O pasan a rojo por seguridad mientras vehículos frenan
+  digitalWrite(PEAT_V_EO, LOW);
+  digitalWrite(PEAT_R_EO, HIGH);
+  
+  delay(TIEMPO_AMARILLO);
+
+  // --- TODO EN ROJO (Seguridad de Paso) ---
+  digitalWrite(LED_A_NS, LOW);
+  digitalWrite(LED_R_NS, HIGH);
+  digitalWrite(LED_R_EO, HIGH);
+  
+  digitalWrite(PEAT_V_NS, LOW);
+  digitalWrite(PEAT_R_NS, HIGH);
+  digitalWrite(PEAT_V_EO, LOW);
+  digitalWrite(PEAT_R_EO, HIGH);
+  
+  delay(TIEMPO_ROJO_TOTAL);
+}
