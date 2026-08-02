@@ -6,3 +6,10 @@ const int LED_R_NS = 11; // Rojo Vehicular Norte-Sur
 const int LED_V_EO = 8;  // Verde Vehicular Este-Oeste
 const int LED_A_EO = 7;  // Amarillo Vehicular Este-Oeste
 const int LED_R_EO = 6;  // Rojo Vehicular Este-Oeste
+
+// --- PINES SEMÁFOROS PEATONALES ---
+const int PEAT_V_NS = 10; // Verde Peatonal Norte-Sur
+const int PEAT_R_NS = 9;  // Rojo Peatonal Norte-Sur
+
+const int PEAT_V_EO = 5;  // Verde Peatonal Este-Oeste
+const int PEAT_R_EO = 4;  // Rojo Peatonal Este-Oeste
